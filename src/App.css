@@ -1,13 +1,16 @@
+/* Importing fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&family=Lobster&family=Dancing+Script:wght@700&display=swap');
 
+/* Setting a background gradient */
 body {
   background: linear-gradient(to right, #ffd1dc, #ff8a80); /* Soft peach gradient */
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif; /* Default font family */
   margin: 0;
   padding: 0;
-  color: #333;
+  color: #333; /* Default text color */
 }
 
+/* Styling the main application container */
 .App {
   text-align: center;
   max-width: 600px;
@@ -16,14 +19,16 @@ body {
   padding: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
-  background: linear-gradient(to right, #ffffff, #ffe0e9);
+  background: linear-gradient(to right, #ffffff, #ffe0e9); /* Gradient background */
   transition: transform 0.3s ease;
 }
 
+/* Hover effect for the whole application */
 .App:hover {
   transform: scale(1.02);
 }
 
+/* Styling for the heading */
 h1 {
   color: #4b0082;
   margin-bottom: 20px;
@@ -32,10 +37,11 @@ h1 {
   font-weight: bold; /* Bold heading */
 }
 
+/* Styling for text input fields */
 input[type="text"] {
   margin: 10px 0;
   padding: 12px;
-  width: calc(100% - 24px);
+  width: calc(100% - 24px); /* Full width minus padding */
   border: 2px solid #ddd;
   border-radius: 8px;
   font-size: 16px;
@@ -44,10 +50,11 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-  border-color: #4b0082;
+  border-color: #4b0082; /* Change border color on focus */
   outline: none;
 }
 
+/* Styling for buttons */
 button {
   margin: 5px;
   padding: 10px 20px;
@@ -60,13 +67,14 @@ button {
 }
 
 button:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Hover effect */
 }
 
 button:focus {
   outline: none;
 }
 
+/* Add Task button styles */
 button.add-task {
   background-color: #ff7f50;
   color: white;
@@ -76,6 +84,7 @@ button.add-task:hover {
   background-color: #ff6347;
 }
 
+/* Remove Task button styles */
 button.remove-task {
   background-color: #ff4500;
   color: white;
@@ -85,29 +94,23 @@ button.remove-task:hover {
   background-color: #e03c00;
 }
 
-button.filter {
-  background-color: #178be9;
+/* Filter and Sort button styles */
+button.filter, button.sort {
+  background-color: #178be9; /* Blue color */
   color: white;
 }
 
-button.filter:hover {
-  background-color:#1085e4 ; /* New hover color */
+button.filter:hover, button.sort:hover {
+  background-color: #1085e4; /* Darker blue on hover */
 }
 
-button.sort {
-  background-color: #178be9;;
-  color: white;
-}
-
-button.sort:hover {
-  background-color: #1085e4 ; /* Same hover color as filter */
-}
-
+/* Styling for the list of tasks */
 ul {
   list-style-type: none;
   padding: 0;
 }
 
+/* Styling for individual task items */
 li {
   margin: 10px 0;
   display: flex;
@@ -122,9 +125,10 @@ li {
 
 li:hover {
   background-color: #f1f1f1;
-  transform: translateX(5px);
+  transform: translateX(5px); /* Hover effect */
 }
 
+/* Styling for task text */
 li span {
   cursor: pointer;
   flex-grow: 1;
@@ -136,12 +140,14 @@ li span {
   font-weight: bold; /* Bold task text */
 }
 
+/* Styling for completed tasks */
 li span.completed {
   text-decoration: line-through;
   color: #888;
   font-weight: normal; /* Normal weight for completed tasks */
 }
 
+/* Styling for input fields in edit mode */
 li input[type="text"] {
   flex-grow: 1;
   margin-right: 10px;
@@ -149,10 +155,62 @@ li input[type="text"] {
   border: 2px solid #ddd;
   border-radius: 8px;
   font-size: 16px;
-  font-family: 'Roboto', sans-serif; /* Same font style as other text */
+  font-family: 'Roboto', sans-serif; /* Same यह बहुत अच्छा हfont style as other text */
 }
 
+/* Styling for buttons container */
 li div {
   display: flex;
   align-items: center;
+}
+
+
+@media (max-width: 600px) {
+  .App {
+    padding: 10px; /* Adjust padding for smaller screens */
+    margin: 20px auto; /* Center the app with a bit more margin */
+  }
+
+  /* Adjust margin and padding for list items on smaller screens */
+  li {
+    margin: 5px 0;
+    padding: 10px;
+  }
+  
+  /* Adjust font size and padding for input fields on smaller screens */
+  input[type="text"] {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  /* Adjust font size for buttons on smaller screens */
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .App {
+    padding: 10px; /* Adjust padding for smaller screens */
+    margin: 40px 20px; /* Center the app with a bit more margin */
+  }
+
+  /* Adjust margin and padding for list items on smaller screens */
+  li {
+    margin: 5px 0;
+    padding: 10px;
+  }
+  
+  /* Adjust font size and padding for input fields on smaller screens */
+  input[type="text"] {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  /* Adjust font size for buttons on smaller screens */
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 }
